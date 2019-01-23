@@ -2,6 +2,8 @@
 
 Vous avez besoin de Docker pour faire fonctionner le serveur HTTP dans un terminal bash
 
+Présentation sur [Google drive](https://docs.google.com/presentation/d/179TCChjhxwXM-YmV00hwJKBQFr5-L1mUE66mmZ-J-AQ/edit?usp=sharing)
+
 ## Installation
 
 Lancer le conteneur
