@@ -1,30 +1,12 @@
-# Docker Apache2
-
-Vous avez besoin de Docker pour faire fonctionner le serveur HTTP dans un terminal bash
+# Apache2
 
 Présentation sur [Google drive](https://docs.google.com/presentation/d/179TCChjhxwXM-YmV00hwJKBQFr5-L1mUE66mmZ-J-AQ/edit?usp=sharing)
-
-## Installation
-
-Lancer le conteneur
-
-```
-$ ./start.sh
-```
-
-Lancer Apache2 dans le conteneur Docker
-
-```
-$ apachectl start
-```
-
-Votre site sera disponible via `http://localhost:8080`; ATTENTION, le conteneur docker écoute le port 8080 !
 
 ### TP1
 
 ### Exercice 1
 
-Objectif : Créer un dossier `data` accessible via `http://localhost:8080/data` en libre lecture du contenu.
+Objectif : Créer un dossier `data` accessible via `http://localhost/data` en libre lecture du contenu.
 
 Pour ce faire vous devez :
  - Créer un dossier `data` dans `html`
@@ -35,7 +17,7 @@ Pour ce faire vous devez :
 
 ### Exercice 2
 
-Objectif : Créer un dossier `private` accessible via `http://localhost:8080/private` qui indexe seulement une liste de fichiers
+Objectif : Créer un dossier `private` accessible via `http://localhost/private` qui indexe seulement une liste de fichiers
 
 Pour ce faire vous devez :
  - Créer un dossier `private` dans `html`
@@ -46,14 +28,14 @@ Pour ce faire vous devez :
 
 ### Exercice 3
 
-Objectif : Créer un dossier `profiles` accessible via `http://localhost:8080/profiles` qui possède une liste de dossiers de profils
+Objectif : Créer un dossier `profiles` accessible via `http://localhost/profiles` qui possède une liste de dossiers de profils
 
 Pour ce faire vous devez :
  - Créer un dossier `profiles` dans `html`
  - Créer 3 sous-dossiers dans `profiles` : `Jean`, `Joe`, `Janne`
  - Ajouter du contenu dans chaque sous-dossier
  - `Jean` doit être indexable
- - `Joe` doit avoir une page par défaut autre que `index.html` (exemple : `home.html`) accessible via `http://localhost:8080/profiles/joe`
+ - `Joe` doit avoir une page par défaut autre que `index.html` (exemple : `home.html`) accessible via `http://localhost/profiles/joe`
  - `Janne` ne doit pas être accessible
   - La page d'erreur 403 doit être une page customisée (403.html)
  - La racine `profiles` ne doit pas être indexable
@@ -61,7 +43,7 @@ Pour ce faire vous devez :
 
 ## TP2
 
-Objectif : Créer un dossier `security` avec 3 sous-dossiers `admin`, `jean` et `janne` et sécuriser le dossier `admin` pour le groupe `admin`, le dossier `jean` pour l'utilisateur `jean` et le dossier `janne` pour l'utilisatrice `janne`. Le tout accessible via `http://localhost:8080/security/admin|jean|janne`
+Objectif : Créer un dossier `security` avec 3 sous-dossiers `admin`, `jean` et `janne` et sécuriser le dossier `admin` pour le groupe `admin`, le dossier `jean` pour l'utilisateur `jean` et le dossier `janne` pour l'utilisatrice `janne`. Le tout accessible via `http://localhost/security/admin|jean|janne`
 
 Pour ce faire vous devez :
  - Activer le module `authz_groupfile` via `a2enmod`
@@ -77,7 +59,7 @@ Pour ce faire vous devez :
 
 ### Exercice 1
 
-Objectif : Créer 2 sites `monsite-a.fr:8080` et `monsite-b.fr:8080` contenus dans les dossiers `a` et `b` chacun avec leur fichiers de logs.
+Objectif : Créer 2 sites `monsite-a.fr` et `monsite-b.fr` contenus dans les dossiers `a` et `b` chacun avec leur fichiers de logs.
 
 Pour ce faire vous devez :
  - Créer 2 dossiers `a` et `b` dans `html`
@@ -88,7 +70,7 @@ Pour ce faire vous devez :
 
 ### Exercice 2
 
-Objectif : Créer un site `monsite-php.fr:8080` qui affiche une page HTML via PHP
+Objectif : Créer un site `monsite-php.fr` qui affiche une page HTML via PHP
 
 Pour ce faire vous devez :
  - Installer `php` dans le conteneur Docker (`apt install php`)
@@ -99,7 +81,7 @@ Pour ce faire vous devez :
 
 ## TP4
 
-Objectif : Créer un site `monsite-info.fr:8080` contenu dans `info` et réécrire les URLs de ce format : `monsite-info.fr/info/{user}` en ce chemin `monsite-info.fr/index.php?user={user}&ip={ip}`
+Objectif : Créer un site `monsite-info.fr` contenu dans `info` et réécrire les URLs de ce format : `monsite-info.fr/info/{user}` en ce chemin `monsite-info.fr/index.php?user={user}&ip={ip}`
 
 Pour ce faire vous devez :
  - Activer le module `rewrite`
