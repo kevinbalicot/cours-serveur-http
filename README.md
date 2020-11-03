@@ -4,6 +4,11 @@ Présentation sur [Google drive](https://docs.google.com/presentation/d/179TCChj
 
 ### TP1
 
+Pour l'ensemble des TP :
+- Supprimez les fichiers existants dans `site-available`.
+- créer un fichier `tp.conf` dans `site-available`.
+- Activer votre nouvelle configuration avec `a2ensite tp.conf`.
+
 ### Exercice 1
 
 Objectif : Créer un dossier `data` accessible via `http://localhost/data` en libre lecture du contenu.
@@ -11,7 +16,7 @@ Objectif : Créer un dossier `data` accessible via `http://localhost/data` en li
 Pour ce faire vous devez :
  - Créer un dossier `data` dans `html`
  - Ajouter du contenu dans le dossier `data` (un fichier .txt, une image etc ...)
- - Modifier le fichier de configuration `default.conf` dans `site-available`
+ - Modifier le fichier de configuration `tp.conf` dans `site-available`
  - Activer votre configuration via la commande `a2ensite`
  - Recharger votre configuration via `service apache2 reload`
 
@@ -22,7 +27,7 @@ Objectif : Créer un dossier `private` accessible via `http://localhost/private`
 Pour ce faire vous devez :
  - Créer un dossier `private` dans `html`
  - Ajouter du contenu dans le dossier `private` (au moins 3 fichiers)
- - Modifier le fichier de configuration `default.conf` dans `site-available`
+ - Modifier le fichier de configuration `tp.conf` dans `site-available`
   - On doit pouvoir lister 2 fichiers sur 3 (le 3ème doit être interdit de lecture)
  - Recharger votre configuration via `service apache2 reload`
 
